@@ -15,7 +15,7 @@ const Home = () => {
 
                 <div className="download">
                     <NumberBtn url="https://google.com" classname="cv-btn" text="Download CV" />
-                    <NumberBtn url="https://facebook.com" classname="cover-btn" text="Download CV" />
+                    <NumberBtn url="https://facebook.com" classname="cover-btn" text="Download Cover Letter" />
                 </div>
 
                 <div className="social">
