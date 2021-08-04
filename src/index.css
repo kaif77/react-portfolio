@@ -1,13 +1,158 @@
-body {
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Reset */
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto',sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Common */
+body{
+  background-color: #3498db;
+  min-height: 100vh;
+}
+
+a{
+  text-decoration: none;
+  margin: 10px;
+  transition: all 0,3s ease-in;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.home-page{
+  position: relative;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(./Images/back.png);
+  background-repeat: no-repeat;
+  background-size: 750px;
+  background-position: bottom center;
+}
+
+.home-page::after{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #3498db;
+  opacity: 0.5;
+}
+
+.home-page h2{
+  font-size: 4rem;
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  animation:anim 2s forwards;
+}
+
+.home-page p{
+  font-size: 1.2rem;
+  text-align: center;
+  max-width: 800px;
+  position: relative;
+  margin: 10px 0;
+  animation: anim 2s forwards 2s;
+  z-index: 2;
+  opacity: 0;
+}
+
+/* Download Button */
+.download{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 10px;
+  animation: anim 2s forwards 4s;
+  opacity: 0;
+}
+
+.download a{
+  font-size: 1rem;
+  padding: 20px 40px;
+}
+
+/* CV Button */
+.cv-btn{
+  background-color: white;
+  color: black;
+}
+
+.cover-btn{
+  background-color: black;
+  color: white;
+}
+
+.cover-btn:hover{
+  background-color: white;
+  color: black;
+}
+
+.cv-btn:hover{
+  background-color: black;
+  color: white;
+}
+
+.social{
+  position: relative;
+  z-index: 2;
+  animation: anim  2s forwards 6s;
+  color: black;
+  opacity: 0;
+}
+
+.soc-btn{
+font-size: 2rem;
+color: black;
+}
+
+.soc-btn:hover{
+  color: white;
+}
+
+/* keyframs */
+@keyframes anim {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+@media(max-width:600px) {
+  .home-page{
+    background-size: 450px;
+  }
+
+  .home-page h2{
+    font-size: 3rem;
+  }
+
+  .home-page p{
+    font-size: 1rem;
+  }
+
+  .download{
+    flex-direction: column;
+  }
+
+  .download a{
+    font-size: .9rem;
+  }
 }
