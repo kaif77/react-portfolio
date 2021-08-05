@@ -2,222 +2,430 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* Reset */
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Roboto',sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Common */
-body{
-  background-color: #3498db;
-  min-height: 100vh;
+body {
+    background-color: #3498db;
+    min-height: 100vh;
 }
 
-a{
-  text-decoration: none;
-  margin: 10px;
-  transition: all 0,3s ease-in;
+a {
+    text-decoration: none;
+    margin: 10px;
+    transition: all 0, 3s ease-in;
 }
 
-ul{
-  list-style-type: none;
+ul {
+    list-style-type: none;
 }
 
 /* header */
-.hdr{
-  position: absolute;
-  top: 0;
-  z-index: 3;
-  height: 0;
-  width: 100%;
-  background-color: #3498db;
-  transition: all 0.5s ease-in;
-  overflow: hidden;
+.hdr {
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    height: 0;
+    width: 100%;
+    background-color: #3498db;
+    transition: all 0.5s ease-in;
+    overflow: hidden;
 }
 
 /* Menu Links */
-.menu-links{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  text-align: center;
+.menu-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
 }
 
-.menu-links ul li{
-  padding: 20px 30px;
-  margin: 15px 0;
-  font-size: 1.1rem;
+.menu-links ul li {
+    padding: 20px 30px;
+    margin: 15px 0;
+    font-size: 1.1rem;
 }
 
-.menu-links ul li > *{
-  color: black;
-  transition: all 0.3s ease-in;
+.menu-links ul li > * {
+    color: black;
+    transition: all 0.3s ease-in;
 }
 
-.menu-links ul li > *:hover{
-  color: white;
+.menu-links ul li > *:hover {
+    color: white;
 
 }
 
 /* menu btn */
-.menu-btn{
-  position: absolute;
-  top: 40px;
-  left: 40px;
-  z-index: 1000;
+.menu-btn {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 1000;
 }
 
-.menu-btn button{
-  font-size: 2rem;
-  background-color: transparent;
-  color: black;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease-in;
+.menu-btn button {
+    font-size: 2rem;
+    background-color: transparent;
+    color: black;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
 }
 
-.menu-btn button:hover{
-  color: white;
+.menu-btn button:hover {
+    color: white;
 }
 
 /* toggle menu */
-.show{
-  height: 100%;
-  width: 100%;
+.show {
+    height: 100%;
+    width: 100%;
 }
 
 
-.home-page{
-  position: relative;
-  min-height: 100vh;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-image: url(./Images/back.png);
-  background-repeat: no-repeat;
-  background-size: 800px 750px;
-  background-position: bottom center;
+.home-page {
+    position: relative;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(./Images/back.png);
+    background-repeat: no-repeat;
+    background-size: 800px 750px;
+    background-position: bottom center;
 }
 
-.home-page::after{
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #3498db;
-  opacity: 0.5;
+.home-page::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3498db;
+    opacity: 0.5;
 }
 
-.home-page h2{
-  font-size: 4rem;
-  font-weight: 600;
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  animation:anim 2s forwards;
+.home-page h2 {
+    font-size: 4rem;
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    animation: anim 2s forwards;
 }
 
-.home-page p{
-  font-size: 1.2rem;
-  text-align: center;
-  max-width: 800px;
-  position: relative;
-  margin: 10px 0;
-  animation: anim 2s forwards 2s;
-  z-index: 2;
-  opacity: 0;
+.home-page p {
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 800px;
+    position: relative;
+    margin: 10px 0;
+    animation: anim 2s forwards 2s;
+    z-index: 2;
+    opacity: 0;
 }
 
 /* Download Button */
-.download{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 2;
-  margin-bottom: 10px;
-  animation: anim 2s forwards 4s;
-  opacity: 0;
+.download {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 10px;
+    animation: anim 2s forwards 4s;
+    opacity: 0;
 }
 
-.download a{
-  font-size: 1rem;
-  padding: 20px 40px;
+.download a {
+    font-size: 1rem;
+    padding: 20px 40px;
 }
 
 /* CV Button */
-.cv-btn{
-  background-color: white;
-  color: black;
+.cv-btn {
+    background-color: white;
+    color: black;
 }
 
-.cover-btn{
-  background-color: black;
-  color: white;
+.cover-btn {
+    background-color: black;
+    color: white;
 }
 
-.cover-btn:hover{
-  background-color: white;
-  color: black;
+.cover-btn:hover {
+    background-color: white;
+    color: black;
 }
 
-.cv-btn:hover{
-  background-color: black;
-  color: white;
+.cv-btn:hover {
+    background-color: black;
+    color: white;
 }
 
-.social{
-  position: relative;
-  z-index: 2;
-  animation: anim  2s forwards 6s;
-  color: black;
-  opacity: 0;
+.social {
+    position: relative;
+    z-index: 2;
+    animation: anim 2s forwards 6s;
+    color: black;
+    opacity: 0;
 }
 
-.soc-btn{
-font-size: 2rem;
-color: black;
+.soc-btn {
+    font-size: 2rem;
+    color: black;
 }
 
-.soc-btn:hover{
-  color: white;
+.soc-btn:hover {
+    color: white;
 }
 
 /* keyframs */
 @keyframes anim {
-  from{
-    opacity: 0;
-  }
-  to{
-    opacity: 1;
-  }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-@media(max-width:600px) {
-  .home-page{
-    background-size: 450px;
-  }
+/*portfolio*/
 
-  .home-page h2{
-    font-size: 3rem;
-  }
-
-  .home-page p{
-    font-size: 1rem;
-  }
-
-  .download{
+.portfolio-page {
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-  }
+}
 
-  .download a{
-    font-size: .9rem;
-  }
+.portfolio-page h1 {
+    font-size: 2.5rem;
+    color: black;
+    margin-bottom: 50px;
+}
+
+.portfolio-page .boxes {
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.portfolio-page .boxes .bx {
+    width: 30%;
+    background-color: white;
+    padding: 35px;
+    margin: 10px;
+    text-align: center;
+}
+
+.portfolio-page .boxes .bx img {
+    max-width: 45%;
+    margin-bottom: 5px;
+}
+
+.portfolio-page .boxes .bx h4 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.portfolio-page .boxes .bx p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.portfolio-page .boxes .bx .pro-btns a {
+    padding: 15px 25px;
+    font-size: 1rem;
+}
+
+.portfolio-page .boxes .bx .pro-btns a:first-child {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.portfolio-page .boxes .bx .pro-btns a:last-child {
+    background-color: #8e44ad;
+    color: white;
+}
+
+.portfolio-page .boxes .bx .pro-btns a:hover {
+    background-color: black;
+}
+
+.contact-page{
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-page h1{
+    font-size: 2.5rem;
+    color: black;
+    margin-bottom: 50px;
+}
+
+.contact-page .con-form{
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+/*Input Box*/
+.contact-page .con-form .inpb{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    border: none;
+}
+
+.contact-page .con-form .inpb::placeholder,
+.contact-page .con-form .txt-ar::placeholder{
+    color: #5f6464;
+}
+
+/*TextArea*/
+.contact-page .con-form .txt-ar{
+    width: 100%;
+    height: 200px;
+    padding: 15px;
+    font-size: 1rem;
+    resize: none;
+    margin-bottom: 20px;
+}
+
+/*send button*/
+.contact-page .con-form .send-btn{
+    width: 100%;
+    border: none;
+    height: 50px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    outline: none;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in;
+}
+
+.contact-page .con-form .send-btn:hover{
+    background-color: white;
+    color: black;
+}
+
+.contact-page .con-box .con-link span{
+    margin-left: 10px;
+}
+
+.contact-page .con-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 10px;
+}
+
+.contact-page .con-box .con-link{
+    font-size: 1rem;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+@media (max-width: 1200px) {
+    .portfolio-page .boxes .bx {
+        width: 45%;
+    }
+}
+
+@media (max-width: 800px) {
+    .portfolio-page .boxes .bx {
+        width: 45%;
+    }
+
+    .portfolio-page .boxes .bx .pro-btns a {
+        display: block;
+    }
+}
+
+@media (max-width: 600px) {
+    .home-page {
+        background-size: 450px;
+    }
+
+    .home-page h2 {
+        font-size: 3rem;
+    }
+
+    .home-page p {
+        font-size: 1rem;
+    }
+
+    .download {
+        flex-direction: column;
+    }
+
+    .download a {
+        font-size: .9rem;
+    }
+
+    .menu-btn {
+        left: 15px;
+        top:15px
+    }
+
+    .portfolio-page h1 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .portfolio-page .boxes .bx {
+        width: 100%;
+    }
+
+    .portfolio-page .boxes .bx .pro-btns a {
+        display: block;
+    }
+
+    .contact-page h1{
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .contact-page .con-box{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contact-page .con-box .con-link{
+        font-size: .9rem;
+        width: 100%;
+        /*text-align: center;*/
+    }
 }
